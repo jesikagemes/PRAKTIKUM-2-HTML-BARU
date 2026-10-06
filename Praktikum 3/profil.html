@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Profesional | Jesika Lia Rahmawati</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <!-- Aksesibilitas: Tautan Lewati ke Konten -->
+    <a class="lewati" href="#konten">Lewati ke konten utama</a>
+
+    <!-- Topbar Navigasi -->
+    <header class="topbar">
+        <div class="topbar-container">
+            <div class="brand">
+                <span class="brand-badge">in</span>
+                <span class="brand-title">Profil Profesional</span>
+            </div>
+            <nav class="menu" aria-label="Navigasi Utama">
+                <a href="#beranda" class="nav-item">Beranda</a>
+                <a href="#tentang" class="nav-item">Tentang</a>
+                <a href="#keahlian" class="nav-item">Keahlian</a>
+                <a href="#pengalaman" class="nav-item">Pengalaman</a>
+                <a href="#kontak" class="nav-item">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="halaman">
+        <!-- Konten Utama -->
+        <main id="konten" tabindex="-1">
+
+            <!-- Hero Banner & Kartu Profil Utama -->
+            <section id="beranda" class="card card-hero">
+                <div class="cover-banner"></div>
+                <div class="hero-content">
+                    <div class="avatar-container">
+                        <!-- UBAH NAMA FILE FOTO KAMU DI BAWAH INI -->
+                        <img src="foto-profil.jpg" 
+                             alt="Foto profil Jesika Lia Rahmawati mahasiswi Teknik Elektromedis Universitas Muhammadiyah PKU Surakarta" 
+                             class="avatar-img">
+                    </div>
+                    <div class="hero-details">
+                        <h1>Jesika Lia Rahmawati</h1>
+                        <p class="headline">Mahasiswi Teknik Elektromedis | Spesialisasi Kalibrasi, Pemeliharaan & K3 Perangkat Medis</p>
+                        <p class="institution">🎓 <strong>Universitas Muhammadiyah PKU Surakarta</strong></p>
+                        <p class="location">Surakarta, Jawa Tengah, Indonesia</p>
+                        
+                        <div class="hero-actions">
+                            <a href="#kontak" class="btn btn-primary">Hubungi Saya</a>
+                            <a href="#pengalaman" class="btn btn-secondary">Lihat Portofolio</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 1: Ringkasan Profil -->
+            <section id="tentang" class="card">
+                <div class="card-header">
+                    <h2>Tentang Saya</h2>
+                </div>
+                <p class="text-body">
+                    Saya adalah mahasiswi program studi Teknik Elektromedis di <strong>Universitas Muhammadiyah PKU Surakarta</strong> yang berfokus pada keandalan dan keselamatan teknologi kesehatan. Memiliki pemahaman kuat dalam pengujian akurasi instrumen medis, perbaikan rangkaian elektronika dasar, serta penerapan standar keselamatan listrik di lingkungan rumah sakit.
+                </p>
+            </section>
+
+            <!-- Section 2: Keahlian Utama (3 Kartu Informasi) -->
+            <section id="keahlian" class="card">
+                <div class="card-header">
+                    <h2>Keahlian & Kompetensi Utama</h2>
+                </div>
+                <div class="grid-cards">
+                    <article class="sub-card">
+                        <span class="card-icon">🩺</span>
+                        <h3>Kalibrasi Perangkat Medis</h3>
+                        <p>Pengujian akurasi dan pemeliharaan rutin pada instrumen medis seperti Infuse Pump, EKG, dan Patient Monitor.</p>
+                        <span class="badge">Kompetensi Teknik</span>
+                    </article>
+
+                    <article class="sub-card">
+                        <span class="card-icon">⚡</span>
+                        <h3>Troubleshooting Rangkaian</h3>
+                        <p>Analisis kerusakan dan perbaikan modul elektronika medis dasar serta instrumen laboratorium kesehatan.</p>
+                        <span class="card-tag">Elektronika</span>
+                    </article>
+
+                    <article class="sub-card">
+                        <span class="card-icon">🛡️</span>
+                        <h3>Keselamatan Listrik Medis (K3)</h3>
+                        <p>Pengukuran arus bocor isolasi dan pengujian impedansi grounding alat kesehatan sesuai standar keselamatan IEC 60601.</p>
+                        <span class="card-tag">K3 Rumah Sakit</span>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Section 3: Pengalaman & Praktikum -->
+            <section id="pengalaman" class="card">
+                <div class="card-header">
+                    <h2>Pengalaman Praktikum & Akademik</h2>
+                </div>
+                <div class="list-pengalaman">
+                    <article class="item-pengalaman">
+                        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=300&auto=format&fit=crop" 
+                             alt="Praktikum pemeliharaan alat medis laboratorium di Universitas Muhammadiyah PKU Surakarta" 
+                             class="thumb-img">
+                        <div class="item-details">
+                            <h3>Praktikum Instrumentasi Medis & EKG</h3>
+                            <p class="item-sub">Program Studi Teknik Elektromedis — Universitas Muhammadiyah PKU Surakarta</p>
+                            <p class="item-desc">Pengukuran dan analisis sinyal biopotensial jantung serta kalibrasi berkala pada unit monitor pasien.</p>
+                        </div>
+                    </article>
+
+                    <article class="item-pengalaman">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=300&auto=format&fit=crop" 
+                             alt="Pengujian keselamatan kelistrikan peralatan elektromedis" 
+                             class="thumb-img">
+                        <div class="item-details">
+                            <h3>Pengujian Safety Analyzer Alat Kesehatan</h3>
+                            <p class="item-sub">Laboratorium Elektromedis — UMPKU</p>
+                            <p class="item-desc">Simulasi inspeksi keselamatan kelistrikan untuk mencegah arus bocor pada perangkat yang terhubung ke pasien.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Section 4: Kontak -->
+            <section id="kontak" class="card">
+                <div class="card-header">
+                    <h2>Informasi Kontak & Kampus</h2>
+                </div>
+                <div class="contact-info">
+                    <p><strong>Jesika Lia Rahmawati</strong></p>
+                    <p>Program Studi Teknik Elektromedis — <strong>Universitas Muhammadiyah PKU Surakarta</strong></p>
+                    <p>📍 Alamat Kampus: Jl. Tulang Bawang No.26, Kadipiro, Banjarsari, Kota Surakarta, Jawa Tengah</p>
+                    <p>✉️ Email: jesikalia@umpku.ac.id | 💼 LinkedIn: linkedin.com/in/jesikaliarahmawati</p>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p><strong>Universitas Muhammadiyah PKU Surakarta</strong></p>
+            <p>Portofolio Mahasiswa — Praktikum Pemrograman Web</p>
+        </footer>
+    </div>
+</body>
+</html>

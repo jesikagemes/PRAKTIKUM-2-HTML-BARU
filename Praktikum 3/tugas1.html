@@ -4,64 +4,186 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Kampus | Universitas Muhammadiyah PKU Surakarta</title>
-    <!-- Menghubungkan ke file style1.css -->
     <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-    <!-- Aksesibilitas: Tautan lewati ke konten -->
-    <a class="lewati" href="#konten">Lewati ke konten</a>
+    <a class="lewati" href="#konten">Lewati ke konten utama</a>
 
     <div class="halaman">
-        <!-- 1. Header (Memakai elemen semantik header) -->
         <header class="header" id="beranda">
-            <p class="identitas">Praktikum Pemrograman Web</p>
-            <h1>Universitas Muhammadiyah PKU Surakarta</h1>
-            <p>Belajar membangun halaman web yang rapi, responsif, dan aksesibel.</p>
+            <div class="header-content">
+                <span class="badge-tag">Portal Resmi Kampus</span>
+                <h1>Universitas Muhammadiyah PKU Surakarta</h1>
+                <p class="sub-judul">Mewujudkan Pendidikan Tinggi Kesehatan dan Teknologi yang Unggul, Islami, serta Berdaya Saing Global.</p>
+                <div class="hero-buttons">
+                    <a href="#profil" class="btn-primary">Jelajahi Profil</a>
+                    <a href="#layanan" class="btn-secondary">Layanan Digital</a>
+                </div>
+            </div>
         </header>
 
-        <!-- 2. Navigasi Utama (3 Tautan Navigasi) -->
         <nav class="menu" aria-label="Navigasi Utama">
-            <a href="#beranda">Beranda</a>
-            <a href="#profil">Profil Kampus</a>
-            <a href="#layanan">Layanan Digital</a>
+            <a href="#beranda" class="nav-item">Beranda</a>
+            <a href="#profil" class="nav-item">Profil</a>
+            <a href="#layanan" class="nav-item">Layanan Digital</a>
+            <a href="#berita" class="nav-item">Berita & Informasi</a>
+            <a href="#kontak" class="nav-item">Kontak</a>
         </nav>
 
-        <!-- 3. Konten Utama (Memakai elemen semantik main) -->
         <main id="konten" tabindex="-1">
-            <!-- Section Profil -->
+
             <section id="profil" class="panel">
-                <h2>Profil Kampus</h2>
-                <p>
-                    Universitas Muhammadiyah PKU Surakarta merupakan perguruan tinggi yang berkomitmen mencetak lulusan berdaya saing tinggi, berkarakter, serta menguasai teknologi informasi di era digital.
+                <div class="panel-header">
+                    <h2>Profil Universitas Muhammadiyah PKU Surakarta</h2>
+                    <div class="garis-hias"></div>
+                </div>
+                <p class="teks-deskripsi">
+                    <strong>Universitas Muhammadiyah PKU Surakarta</strong> merupakan institusi pendidikan tinggi terkemuka yang berdedikasi dalam mengembangkan ilmu pengetahuan, teknologi, dan kesehatan berbasis nilai-nilai keislaman. Dengan fasilitas laboratorium modern, kurikulum berstandar industri, serta tenaga pengajar profesional, UMPKU siap mencetak generasi muda yang kompeten dan berkarakter mulia.
                 </p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-angka">15+</span>
+                        <span class="stat-label">Program Studi</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-angka">5.000+</span>
+                        <span class="stat-label">Mahasiswa Aktif</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-angka">98%</span>
+                        <span class="stat-label">Kelulusan Tepat Waktu</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-angka">Aka-A</span>
+                        <span class="stat-label">Akreditasi Kampus</span>
+                    </div>
+                </div>
             </section>
 
-            <!-- Section Layanan (3 Kartu Informasi) -->
             <section id="layanan" class="panel">
-                <h2>Contoh Layanan Digital</h2>
+                <div class="panel-header">
+                    <h2>Layanan Digital Terpadu</h2>
+                    <div class="garis-hias"></div>
+                </div>
+
                 <div class="kartu-grid">
                     <article class="kartu">
-                        <h3>Sistem Informasi Akademik</h3>
-                        <p>Layanan portal terpadu untuk pengisian KRS, jadwal perkuliahan, dan pemantauan nilai mahasiswa.</p>
+                        <div class="ikon-box">🎓</div>
+                        <h3>Sistem Informasi Akademik (SIAKAD)</h3>
+                        <p>Portal mahasiswa untuk pengisian KRS online, cek Transkrip Nilai, jadwal kuliah, dan status pembayaran UKT.</p>
+                        <span class="kartu-tag">Akademik</span>
                     </article>
 
                     <article class="kartu">
-                        <h3>Pembelajaran Daring (E-Learning)</h3>
-                        <p>Ruang interaktif mahasiswa dan dosen untuk mengakses materi kuliah, diskusi, serta mengumpulkan tugas.</p>
+                        <div class="ikon-box">💻</div>
+                        <h3>Pembelajaran Daring (LMS)</h3>
+                        <p>Platform e-learning interaktif tempat pengumpulan tugas, kuis online, serta unduh modul materi perkuliahan.</p>
+                        <span class="kartu-tag">E-Learning</span>
                     </article>
 
                     <article class="kartu">
-                        <h3>Perpustakaan Digital</h3>
-                        <p>Akses koleksi jurnal ilmiah, e-book, dan referensi akademik secara online kapan saja.</p>
+                        <div class="ikon-box">📚</div>
+                        <h3>Perpustakaan Digital (E-Library)</h3>
+                        <p>Akses ke ribuan jurnal internasional, repositori skripsi, dan peminjaman buku digital secara terpadu.</p>
+                        <span class="kartu-tag">Pustaka</span>
+                    </article>
+
+                    <article class="kartu">
+                        <div class="ikon-box">📝</div>
+                        <h3>Pendaftaran Mahasiswa Baru (PMB)</h3>
+                        <p>Layanan jalur penerimaan mahasiswa baru online, simulasi tes masuk, dan informasi beasiswa kuliah.</p>
+                        <span class="kartu-tag">Penerimaan</span>
+                    </article>
+
+                    <article class="kartu">
+                        <div class="ikon-box">🩺</div>
+                        <h3>Portal Praktikum & Laboratorium</h3>
+                        <p>Pendaftaran jadwal pemakaian laboratorium elektro-medis, alat kesehatan, dan modul panduan praktikum.</p>
+                        <span class="kartu-tag">Praktikum</span>
+                    </article>
+
+                    <article class="kartu">
+                        <div class="ikon-box">💼</div>
+                        <h3>Pusat Karir & Alumni (CDC)</h3>
+                        <p>Informasi lowongan kerja, sertifikasi kompetensi, serta pemetaan jejaring alumni lintas angkatan.</p>
+                        <span class="kartu-tag">Karir</span>
                     </article>
                 </div>
             </section>
+
+            <section id="berita" class="panel">
+                <div class="panel-header">
+                    <h2>Kabar & Berita Kampus</h2>
+                    <div class="garis-hias"></div>
+                </div>
+
+                <div class="berita-grid">
+                    <article class="berita-card">
+                        <img src="https://picsum.photos/400/220?random=1" alt="Suasana kegiatan praktikum pemrograman web di laboratorium komputer Universitas Muhammadiyah PKU Surakarta" class="berita-img">
+                        <div class="berita-body">
+                            <span class="berita-tgl">06 Oktober 2026</span>
+                            <h3>Praktikum Pemrograman Web: Membangun Website Responsif</h3>
+                            <p>Mahasiswa antusias mempelajari teknik pemisahan struktur HTML dan CSS eksternal untuk hasil web profesional.</p>
+                        </div>
+                    </article>
+
+                    <article class="berita-card">
+                        <img src="https://picsum.photos/400/220?random=2" alt="Gedung rektorat Universitas Muhammadiyah PKU Surakarta pada sore hari" class="berita-img">
+                        <div class="berita-body">
+                            <span class="berita-tgl">01 Oktober 2026</span>
+                            <h3>Penguatan Fasilitas Digital & Perpustakaan Terpadu</h3>
+                            <p>UMPKU terus meningkatkan kecepatan infrastruktur jaringan internet dan koleksi jurnal digital kampus.</p>
+                        </div>
+                    </article>
+
+                    <article class="berita-card">
+                        <img src="https://picsum.photos/400/220?random=3" alt="Foto bersama mahasiswa penerima beasiswa prestasi di Universitas Muhammadiyah PKU Surakarta" class="berita-img">
+                        <div class="berita-body">
+                            <span class="berita-tgl">25 September 2026</span>
+                            <h3>Penyerahan Beasiswa Prestasi Mahasiswa Berbakti</h3>
+                            <p>Puluhan mahasiswa berprestasi meraih penghargaan beasiswa pendidikan dari kampus dan mitra industri.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+           
+            <section id="kontak" class="panel">
+                <div class="panel-header">
+                    <h2>Hubungi Kami</h2>
+                    <div class="garis-hias"></div>
+                </div>
+                <div class="kontak-box">
+                    <p><strong>Universitas Muhammadiyah PKU Surakarta</strong></p>
+                    <p>📍 Jl. Tulang Bawang No.26, Kadipiro, Banjarsari, Kota Surakarta, Jawa Tengah</p>
+                    <p>✉️ Email: info@umpku.ac.id | 📞 Telepon: (0271) 718615</p>
+                </div>
+            </section>
+
         </main>
 
-        <!-- 4. Footer (Memakai elemen semantik footer) -->
         <footer class="footer">
-            <p><strong>Universitas Muhammadiyah PKU Surakarta</strong></p>
-            <p>Tugas Mandiri — Praktikum Pemrograman Web</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Universitas Muhammadiyah PKU Surakarta</h3>
+                    <p>Kampus unggulan yang berdedikasi membangun insan akademis berkarakter islami dan menguasai teknologi modern.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Tautan Cepat</h3>
+                    <p><a href="#beranda">Beranda</a></p>
+                    <p><a href="#profil">Profil Kampus</a></p>
+                    <p><a href="#layanan">Layanan Digital</a></p>
+                </div>
+                <div class="footer-col">
+                    <h3>Praktikum Web</h3>
+                    <p>Tugas Mandiri Modul CSS Eksternal</p>
+                    <p>Latihan Mahasiswa Praktikum Pemrograman Web</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Universitas Muhammadiyah PKU Surakarta. Hak Cipta Dilindungi.</p>
+            </div>
         </footer>
     </div>
 </body>
