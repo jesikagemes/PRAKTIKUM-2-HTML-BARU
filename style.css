@@ -1,0 +1,61 @@
+* { box-sizing: border-box; }
+html { scroll-padding-top: 1rem; }
+body {
+ margin: 0;
+ font-family: Arial, sans-serif;
+ line-height: 1.6;
+ color: #243247;
+ background-color: #edf2f7;
+}
+.halaman {
+ width: min(100% - 2rem, 1000px);
+ margin: 1rem auto;
+ background: #ffffff;
+ border: 1px solid #d4deea;
+}
+.header {
+ padding: 2rem;
+ color: #ffffff;
+ background: #1b3c6b;
+ border-bottom: 5px solid #f7941d;
+}
+h1 { margin: 0 0 1rem; font-size: 2rem; line-height: 1.3; }
+h2, h3 { margin-top: 0; color: #1b3c6b; }
+.identitas { margin-top: 0; }
+.menu {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 0.5rem;
+ padding: 0.75rem 1rem;
+ background: #eef3f8;
+}
+.menu a {
+ padding: 0.5rem 0.75rem;
+ color: #1b3c6b;
+ text-decoration: none;
+ border-radius: 0.25rem;
+}
+.menu a:hover { color: #ffffff; background: #1b3c6b; }
+a:focus-visible { outline: 3px solid #1b3c6b; outline-offset: 3px; }
+main { padding: 1.5rem; }
+.panel + .panel { margin-top: 2rem; }
+.kartu-grid {
+    display: grid;
+ grid-template-columns: repeat(2, minmax(0, 1fr));
+ gap: 1rem;
+}
+.kartu { padding: 1rem; border: 1px solid #cbd5e1; background: #f8fafc;
+}
+.footer { padding: 1rem; text-align: center; background: #eef3f8; }
+.footer p { margin: 0.25rem 0; }
+.lewati { position: absolute; left: -10000px; }
+.lewati:focus {
+ left: 1rem; top: 1rem; padding: 0.75rem;
+ background: #ffffff; color: #1b3c6b; z-index: 10;
+}
+@media (max-width: 600px) {
+ .header { padding: 1.25rem; }
+ h1 { font-size: 1.5rem; }
+ main { padding: 1rem; }
+ .kartu-grid { grid-template-columns: 1fr; }
+}
