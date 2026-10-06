@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Kampus | Universitas Muhammadiyah PKU Surakarta</title>
+    <!-- Menghubungkan ke file style1.css -->
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <!-- Aksesibilitas: Tautan lewati ke konten -->
+    <a class="lewati" href="#konten">Lewati ke konten</a>
+
+    <div class="halaman">
+        <!-- 1. Header (Memakai elemen semantik header) -->
+        <header class="header" id="beranda">
+            <p class="identitas">Praktikum Pemrograman Web</p>
+            <h1>Universitas Muhammadiyah PKU Surakarta</h1>
+            <p>Belajar membangun halaman web yang rapi, responsif, dan aksesibel.</p>
+        </header>
+
+        <!-- 2. Navigasi Utama (3 Tautan Navigasi) -->
+        <nav class="menu" aria-label="Navigasi Utama">
+            <a href="#beranda">Beranda</a>
+            <a href="#profil">Profil Kampus</a>
+            <a href="#layanan">Layanan Digital</a>
+        </nav>
+
+        <!-- 3. Konten Utama (Memakai elemen semantik main) -->
+        <main id="konten" tabindex="-1">
+            <!-- Section Profil -->
+            <section id="profil" class="panel">
+                <h2>Profil Kampus</h2>
+                <p>
+                    Universitas Muhammadiyah PKU Surakarta merupakan perguruan tinggi yang berkomitmen mencetak lulusan berdaya saing tinggi, berkarakter, serta menguasai teknologi informasi di era digital.
+                </p>
+            </section>
+
+            <!-- Section Layanan (3 Kartu Informasi) -->
+            <section id="layanan" class="panel">
+                <h2>Contoh Layanan Digital</h2>
+                <div class="kartu-grid">
+                    <article class="kartu">
+                        <h3>Sistem Informasi Akademik</h3>
+                        <p>Layanan portal terpadu untuk pengisian KRS, jadwal perkuliahan, dan pemantauan nilai mahasiswa.</p>
+                    </article>
+
+                    <article class="kartu">
+                        <h3>Pembelajaran Daring (E-Learning)</h3>
+                        <p>Ruang interaktif mahasiswa dan dosen untuk mengakses materi kuliah, diskusi, serta mengumpulkan tugas.</p>
+                    </article>
+
+                    <article class="kartu">
+                        <h3>Perpustakaan Digital</h3>
+                        <p>Akses koleksi jurnal ilmiah, e-book, dan referensi akademik secara online kapan saja.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- 4. Footer (Memakai elemen semantik footer) -->
+        <footer class="footer">
+            <p><strong>Universitas Muhammadiyah PKU Surakarta</strong></p>
+            <p>Tugas Mandiri — Praktikum Pemrograman Web</p>
+        </footer>
+    </div>
+</body>
+</html>
