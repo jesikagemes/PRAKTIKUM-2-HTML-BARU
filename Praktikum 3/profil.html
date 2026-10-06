@@ -3,147 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Profesional | Jesika Lia Rahmawati</title>
-    <link rel="stylesheet" href="style1.css">
+    <title>Profil Profesional - Jesika Lia Rahmawati</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="profil.css">
 </head>
 <body>
-    <!-- Aksesibilitas: Tautan Lewati ke Konten -->
-    <a class="lewati" href="#konten">Lewati ke konten utama</a>
 
-    <!-- Topbar Navigasi -->
-    <header class="topbar">
-        <div class="topbar-container">
-            <div class="brand">
-                <span class="brand-badge">in</span>
-                <span class="brand-title">Profil Profesional</span>
+    <div class="app-wrapper">
+        <header class="card profile-header">
+            <div class="cover-gradient"></div>
+            <div class="profile-body">
+                <div class="avatar-wrapper">
+                    <img src="foto-profil.jpg" alt="Jesika Lia Rahmawati" class="avatar-img" onerror="this.src='https://via.placeholder.com/140'">
+                </div>
+                
+                <div class="profile-details">
+                    <div class="header-main">
+                        <div>
+                            <h1 class="user-name">Jesika Lia Rahmawati</h1>
+                            <p class="user-headline">Mahasiswi Teknik Elektromedis | Pembelajar Cepat & Berdedikasi</p>
+                            <p class="user-location">📍 Surakarta, Jawa Tengah, Indonesia</p>
+                        </div>
+                        <div class="tags-group">
+                            <span class="tag tag-primary">Teknik Elektromedis</span>
+                            <span class="tag tag-outline">UMPKU Surakarta</span>
+                        </div>
+                    </div>
+
+                    <p class="quote-text">“Jika kita punya kesempatan ambil saja, ini saatnya mempelajari sesuatu.”</p>
+
+                    <div class="cta-group">
+                        <a href="#kontak" class="btn btn-primary">Hubungi Saya</a>
+                        <a href="#pengalaman" class="btn btn-secondary">Jelajahi Pengalaman</a>
+                    </div>
+                </div>
             </div>
-            <nav class="menu" aria-label="Navigasi Utama">
-                <a href="#beranda" class="nav-item">Beranda</a>
-                <a href="#tentang" class="nav-item">Tentang</a>
-                <a href="#keahlian" class="nav-item">Keahlian</a>
-                <a href="#pengalaman" class="nav-item">Pengalaman</a>
-                <a href="#kontak" class="nav-item">Kontak</a>
-            </nav>
-        </div>
-    </header>
+        </header>
 
-    <div class="halaman">
-        <!-- Konten Utama -->
-        <main id="konten" tabindex="-1">
-
-            <!-- Hero Banner & Kartu Profil Utama -->
-            <section id="beranda" class="card card-hero">
-                <div class="cover-banner"></div>
-                <div class="hero-content">
-                    <div class="avatar-container">
-                        <!-- UBAH NAMA FILE FOTO KAMU DI BAWAH INI -->
-                        <img src="foto-profil.jpg" 
-                             alt="Foto profil Jesika Lia Rahmawati mahasiswi Teknik Elektromedis Universitas Muhammadiyah PKU Surakarta" 
-                             class="avatar-img">
-                    </div>
-                    <div class="hero-details">
-                        <h1>Jesika Lia Rahmawati</h1>
-                        <p class="headline">Mahasiswi Teknik Elektromedis | Spesialisasi Kalibrasi, Pemeliharaan & K3 Perangkat Medis</p>
-                        <p class="institution">🎓 <strong>Universitas Muhammadiyah PKU Surakarta</strong></p>
-                        <p class="location">Surakarta, Jawa Tengah, Indonesia</p>
-                        
-                        <div class="hero-actions">
-                            <a href="#kontak" class="btn btn-primary">Hubungi Saya</a>
-                            <a href="#pengalaman" class="btn btn-secondary">Lihat Portofolio</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 1: Ringkasan Profil -->
-            <section id="tentang" class="card">
-                <div class="card-header">
-                    <h2>Tentang Saya</h2>
-                </div>
-                <p class="text-body">
-                    Saya adalah mahasiswi program studi Teknik Elektromedis di <strong>Universitas Muhammadiyah PKU Surakarta</strong> yang berfokus pada keandalan dan keselamatan teknologi kesehatan. Memiliki pemahaman kuat dalam pengujian akurasi instrumen medis, perbaikan rangkaian elektronika dasar, serta penerapan standar keselamatan listrik di lingkungan rumah sakit.
+        <section class="card">
+            <div class="card-header">
+                <h2 class="card-title">Tentang Saya</h2>
+            </div>
+            <div class="card-body">
+                <p class="text-p">
+                    Saya adalah mahasiswi aktif Teknik Elektromedis di Universitas Muhammadiyah PKU Surakarta. Memiliki keterampilan komunikasi yang efektif dalam bahasa Indonesia maupun bahasa Inggris, saya selalu bersemangat untuk mempelajari hal baru, beradaptasi dengan cepat, dan menghadapi berbagai tantangan akademik maupun profesional.
                 </p>
-            </section>
+                <p class="text-p">
+                    Saya percaya bahwa membangun hubungan yang baik antar generasi—mulai dari teman sejawat, senior, hingga dosen dan praktisi industri—adalah kunci untuk tumbuh bersama dalam lingkungan yang dinamis.
+                </p>
 
-            <!-- Section 2: Keahlian Utama (3 Kartu Informasi) -->
-            <section id="keahlian" class="card">
-                <div class="card-header">
-                    <h2>Keahlian & Kompetensi Utama</h2>
-                </div>
-                <div class="grid-cards">
-                    <article class="sub-card">
-                        <span class="card-icon">🩺</span>
-                        <h3>Kalibrasi Perangkat Medis</h3>
-                        <p>Pengujian akurasi dan pemeliharaan rutin pada instrumen medis seperti Infuse Pump, EKG, dan Patient Monitor.</p>
-                        <span class="badge">Kompetensi Teknik</span>
-                    </article>
-
-                    <article class="sub-card">
-                        <span class="card-icon">⚡</span>
-                        <h3>Troubleshooting Rangkaian</h3>
-                        <p>Analisis kerusakan dan perbaikan modul elektronika medis dasar serta instrumen laboratorium kesehatan.</p>
-                        <span class="card-tag">Elektronika</span>
-                    </article>
-
-                    <article class="sub-card">
-                        <span class="card-icon">🛡️</span>
-                        <h3>Keselamatan Listrik Medis (K3)</h3>
-                        <p>Pengukuran arus bocor isolasi dan pengujian impedansi grounding alat kesehatan sesuai standar keselamatan IEC 60601.</p>
-                        <span class="card-tag">K3 Rumah Sakit</span>
-                    </article>
-                </div>
-            </section>
-
-            <!-- Section 3: Pengalaman & Praktikum -->
-            <section id="pengalaman" class="card">
-                <div class="card-header">
-                    <h2>Pengalaman Praktikum & Akademik</h2>
-                </div>
-                <div class="list-pengalaman">
-                    <article class="item-pengalaman">
-                        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=300&auto=format&fit=crop" 
-                             alt="Praktikum pemeliharaan alat medis laboratorium di Universitas Muhammadiyah PKU Surakarta" 
-                             class="thumb-img">
-                        <div class="item-details">
-                            <h3>Praktikum Instrumentasi Medis & EKG</h3>
-                            <p class="item-sub">Program Studi Teknik Elektromedis — Universitas Muhammadiyah PKU Surakarta</p>
-                            <p class="item-desc">Pengukuran dan analisis sinyal biopotensial jantung serta kalibrasi berkala pada unit monitor pasien.</p>
+                <h3 class="sub-title">Kepemimpinan & Organisasi</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <span class="skill-icon">📋</span>
+                        <div>
+                            <h4>Sekretaris Rohani Islam (2023-2024)</h4>
+                            <p>Mengelola administrasi dan penyelenggaraan kegiatan keagamaan secara terstruktur.</p>
                         </div>
-                    </article>
-
-                    <article class="item-pengalaman">
-                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=300&auto=format&fit=crop" 
-                             alt="Pengujian keselamatan kelistrikan peralatan elektromedis" 
-                             class="thumb-img">
-                        <div class="item-details">
-                            <h3>Pengujian Safety Analyzer Alat Kesehatan</h3>
-                            <p class="item-sub">Laboratorium Elektromedis — UMPKU</p>
-                            <p class="item-desc">Simulasi inspeksi keselamatan kelistrikan untuk mencegah arus bocor pada perangkat yang terhubung ke pasien.</p>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-icon">⚜️</span>
+                        <div>
+                            <h4>Anggota Pramuka (2023-2024)</h4>
+                            <p>Melatih kedisiplinan, kepemimpinan, dan kerja sama tim melalui berbagai kegiatan luar ruangan.</p>
                         </div>
-                    </article>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-icon">👑</span>
+                        <div>
+                            <h4>Ketua / Perwakilan Kelas (2024-2025)</h4>
+                            <p>Menjadi jembatan komunikasi antara mahasiswa dan pihak akademis fakultas.</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-icon">📚</span>
+                        <div>
+                            <h4>Petugas Perpustakaan (2023-2024)</h4>
+                            <p>Menjaga kerapian, pengelolaan peminjaman, dan keteraturan ruang belajar.</p>
+                        </div>
+                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Section 4: Kontak -->
-            <section id="kontak" class="card">
-                <div class="card-header">
-                    <h2>Informasi Kontak & Kampus</h2>
+        <!-- PENGALAMAN -->
+        <section class="card" id="pengalaman">
+            <div class="card-header">
+                <h2 class="card-title">Pengalaman</h2>
+            </div>
+            <div class="card-body">
+                
+                <!-- UMPKU -->
+                <div class="experience-block">
+                    <div class="company-badge">
+                        <div class="company-icon">🏛️</div>
+                        <div>
+                            <h3 class="company-name">Universitas Muhammadiyah PKU Surakarta</h3>
+                            <span class="text-muted">2023 — Sekarang</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-tree">
+                        <div class="timeline-node">
+                            <div class="node-dot"></div>
+                            <div class="node-content">
+                                <h4>Mahasiswi Elektromedis</h4>
+                                <span class="node-date">Sep 2024 — Sekarang</span>
+                                <p>Mempelajari pemeliharaan, kalibrasi, dan pengembangan teknologi peralatan medis modern.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-node">
+                            <div class="node-dot"></div>
+                            <div class="node-content">
+                                <h4>Perwakilan Kelas</h4>
+                                <span class="node-date">Nov 2023 — Mei 2025</span>
+                                <p>Mengoordinasikan kebutuhan akademis kelas dan memfasilitasi diskusi dengan dosen penyampaian materi.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-info">
-                    <p><strong>Jesika Lia Rahmawati</strong></p>
-                    <p>Program Studi Teknik Elektromedis — <strong>Universitas Muhammadiyah PKU Surakarta</strong></p>
-                    <p>📍 Alamat Kampus: Jl. Tulang Bawang No.26, Kadipiro, Banjarsari, Kota Surakarta, Jawa Tengah</p>
-                    <p>✉️ Email: jesikalia@umpku.ac.id | 💼 LinkedIn: linkedin.com/in/jesikaliarahmawati</p>
+
+                <!-- SMA -->
+                <div class="experience-block">
+                    <div class="company-badge">
+                        <div class="company-icon">🏫</div>
+                        <div>
+                            <h3 class="company-name">SMA Negeri 1 Tomohon</h3>
+                            <span class="text-muted">2023 — 2024</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-tree">
+                        <div class="timeline-node">
+                            <div class="node-dot"></div>
+                            <div class="node-content">
+                                <h4>Petugas Perpustakaan</h4>
+                                <span class="node-date">Agu 2023 — Sep 2024</span>
+                                <p>Memfasilitasi layanan sirkulasi buku dan menjaga kerapian inventaris perpustakaan.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-node">
+                            <div class="node-dot"></div>
+                            <div class="node-content">
+                                <h4>Anggota Pramuka</h4>
+                                <span class="node-date">Jun 2023 — Mei 2024</span>
+                                <p>Aktif dalam perkemahan, penjelajahan, serta berpartisipasi dalam acara pelantikan resmi kepolisian.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-node">
+                            <div class="node-dot"></div>
+                            <div class="node-content">
+                                <h4>Sekretaris Rohani Islam</h4>
+                                <span class="node-date">Feb 2023 — Feb 2024</span>
+                                <p>Bertanggung jawab atas jalannya acara, penggalangan dana sosial, serta kegiatan bakti masyarakat.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </section>
 
-        </main>
+            </div>
+        </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p><strong>Universitas Muhammadiyah PKU Surakarta</strong></p>
-            <p>Portofolio Mahasiswa — Praktikum Pemrograman Web</p>
+        <section class="card">
+            <div class="card-header">
+                <h2 class="card-title">Pendidikan</h2>
+            </div>
+            <div class="card-body">
+                <div class="edu-item-card">
+                    <div class="edu-icon-wrapper">🎓</div>
+                    <div class="edu-content">
+                        <h3>Universitas Muhammadiyah PKU Surakarta</h3>
+                        <p class="edu-degree">Sarjana Terapan / S1 Teknik Elektromedis</p>
+                        <span class="edu-period">2024 — 2028</span>
+                        <p class="text-p" style="margin-top: 10px;">
+                            <strong>Aktivitas Organisasi:</strong> Pengurus Rohani Islam & Pramuka Kampus. Berkelanjutan aktif mendukung kolaborasi alumni dan pihak civitas akademika.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="card footer-card" id="kontak">
+            <div class="footer-content">
+                <h2>Siap Berkolaborasi?</h2>
+                <p>Silakan hubungi saya untuk informasi lebih lanjut atau peluang kerja sama.</p>
+                <a href="mailto:jesika@example.com" class="btn btn-primary btn-large">Kirim Pesan Email</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Jesika Lia Rahmawati · Dibuat dengan Standar Web Profesional</p>
+            </div>
         </footer>
     </div>
+
 </body>
 </html>

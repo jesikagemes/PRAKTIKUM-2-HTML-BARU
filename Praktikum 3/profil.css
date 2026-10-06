@@ -1,389 +1,424 @@
-/* =========================================================
-   1. RESET & VARIABLE DESAIN LINKEDIN
-   ========================================================= */
+
 :root {
-    --linkedin-blue: #0a66c2;
-    --linkedin-hover: #004182;
-    --bg-page: #f4f2ee;
+    /* Color Palette (Deep Slate Navy & Royal Accent) */
+    --primary: #1e40af;
+    --primary-hover: #1e3a8a;
+    --primary-light: #eff6ff;
+    --accent: #0284c7;
+    
+    --bg-body: #f8fafc;
     --bg-card: #ffffff;
-    --text-main: #191919;
-    --text-muted: #666666;
-    --border-color: #e0e0e0;
-    --border-accent: #d0d7de;
-    --focus-ring: #f59e0b;
-    --shadow-card: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.05);
+    
+    --text-dark: #0f172a;
+    --text-main: #334155;
+    --text-muted: #64748b;
+    
+    --border: #e2e8f0;
+    --border-hover: #cbd5e1;
+    
+    /* Typography */
+    --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
 }
 
 * {
-    box-sizing: border-box; /* Menjamin tidak ada scroll horizontal pada 375px */
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 4.5rem;
-}
-
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.5;
+    font-family: var(--font-family);
+    background-color: var(--bg-body);
     color: var(--text-main);
-    background-color: var(--bg-page);
-    padding-bottom: 2rem;
+    line-height: 1.6;
+    padding: 32px 16px 60px;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* =========================================================
-   2. AKSESIBILITAS (LEWATI KE KONTEN & FOKUS KEYBOARD)
-   ========================================================= */
-.lewati {
-    position: absolute;
-    left: -10000px;
-}
-
-.lewati:focus {
-    left: 1rem;
-    top: 1rem;
-    padding: 0.75rem 1.25rem;
-    background: #ffffff;
-    color: var(--linkedin-blue);
-    font-weight: bold;
-    border: 2px solid var(--linkedin-blue);
-    border-radius: 6px;
-    z-index: 1000;
-}
-
-a:focus-visible, button:focus-visible {
-    outline: 3px solid var(--focus-ring);
-    outline-offset: 3px;
-    border-radius: 4px;
-}
-
-/* =========================================================
-   3. TOPBAR NAVIGASI (FIXED / STICKY)
-   ========================================================= */
-.topbar {
-    background-color: #ffffff;
-    border-bottom: 1px solid var(--border-color);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.topbar-container {
-    max-width: 900px;
+.app-wrapper {
+    max-width: 860px;
     margin: 0 auto;
-    padding: 0.6rem 1rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-}
-
-.brand-badge {
-    background-color: var(--linkedin-blue);
-    color: #ffffff;
-    font-weight: 800;
-    font-size: 1rem;
-    padding: 0.1rem 0.4rem;
-    border-radius: 3px;
-}
-
-.brand-title {
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: var(--linkedin-blue);
-}
-
-.menu {
-    display: flex;
-    gap: 0.25rem;
-    flex-wrap: wrap;
-}
-
-.nav-item {
-    padding: 0.4rem 0.75rem;
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.88rem;
-    font-weight: 600;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-}
-
-.nav-item:hover {
-    color: var(--text-main);
-    background-color: #f0f0f0;
-}
-
-/* =========================================================
-   4. CONTAINER UTAMA & LAYOUT KARTU
-   ========================================================= */
-.halaman {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 1.25rem 1rem;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .card {
     background-color: var(--bg-card);
-    border-radius: 8px;
-    box-shadow: var(--shadow-card);
-    margin-bottom: 1rem;
-    padding: 1.5rem;
-}
-
-.card-hero {
-    padding: 0 0 1.5rem 0;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
     overflow: hidden;
+    transition: border-color 0.2s ease;
 }
 
-.cover-banner {
-    height: 130px;
-    background: linear-gradient(135deg, #1d4ed8 0%, #0a66c2 100%);
+.card:hover {
+    border-color: var(--border-hover);
 }
 
-.hero-content {
-    padding: 0 1.5rem;
+.card-header {
+    padding: 24px 28px 12px;
+    border-bottom: 1px solid #f1f5f9;
 }
 
-.avatar-container {
-    margin-top: -65px;
-    margin-bottom: 0.75rem;
+.card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+    letter-spacing: -0.02em;
+}
+
+.card-body {
+    padding: 24px 28px;
+}
+
+.profile-header {
+    padding: 0;
+}
+
+.cover-gradient {
+    height: 160px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e40af 50%, #0284c7 100%);
+}
+
+.profile-body {
+    padding: 0 28px 28px;
+    position: relative;
+}
+
+.avatar-wrapper {
+    margin-top: -70px;
+    margin-bottom: 16px;
 }
 
 .avatar-img {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
-    border: 4px solid #ffffff;
+    border: 5px solid var(--bg-card);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     object-fit: cover;
-    background-color: #e2e8f0;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    background-color: #cbd5e1;
 }
 
-.hero-details h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-main);
-    line-height: 1.2;
-}
-
-.headline {
-    font-size: 0.95rem;
-    color: var(--text-main);
-    margin: 0.4rem 0;
-}
-
-.institution {
-    font-size: 0.9rem;
-    color: var(--text-main);
-    margin-bottom: 0.2rem;
-}
-
-.location {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin-bottom: 1.25rem;
-}
-
-.hero-actions {
+.header-main {
     display: flex;
-    gap: 0.75rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
     flex-wrap: wrap;
 }
 
-.btn {
-    padding: 0.45rem 1.25rem;
-    border-radius: 50px;
-    text-decoration: none;
+.user-name {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-dark);
+    letter-spacing: -0.03em;
+}
+
+.user-headline {
+    font-size: 15px;
     font-weight: 600;
-    font-size: 0.88rem;
+    color: var(--primary);
+    margin-top: 2px;
+}
+
+.user-location {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+.tags-group {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 12.5px;
+    font-weight: 600;
+}
+
+.tag-primary {
+    background-color: var(--primary-light);
+    color: var(--primary);
+}
+
+.tag-outline {
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+}
+
+.quote-text {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--text-muted);
+    background: #f8fafc;
+    padding: 10px 16px;
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    margin: 18px 0;
+}
+
+.cta-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.btn {
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
     transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-primary {
-    background-color: var(--linkedin-blue);
+    background-color: var(--primary);
     color: #ffffff;
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
 }
 
 .btn-primary:hover {
-    background-color: var(--linkedin-hover);
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
 }
 
 .btn-secondary {
-    border: 1px solid var(--linkedin-blue);
-    color: var(--linkedin-blue);
+    background-color: #f1f5f9;
+    color: var(--text-dark);
+    border: 1px solid var(--border);
 }
 
 .btn-secondary:hover {
-    background-color: #e8f4ff;
+    background-color: #e2e8f0;
 }
 
-/* =========================================================
-   5. DEKORASI CARD HEADER & KONTEN
-   ========================================================= */
-.card-header {
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.6rem;
-    margin-bottom: 1rem;
+.btn-large {
+    padding: 12px 28px;
+    font-size: 15px;
 }
 
-h2 {
-    font-size: 1.2rem;
+
+.text-p {
+    font-size: 14.5px;
     color: var(--text-main);
+    margin-bottom: 14px;
+}
+
+.sub-title {
+    font-size: 16px;
     font-weight: 700;
+    color: var(--text-dark);
+    margin: 24px 0 14px;
+    letter-spacing: -0.01em;
 }
 
-.text-body {
-    font-size: 0.93rem;
-    line-height: 1.6;
-    color: var(--text-main);
-}
-
-/* Grid Keahlian (CSS Grid) */
-.grid-cards {
+.skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
 }
 
-.sub-card {
-    background-color: #f8fafc;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 1.1rem;
+.skill-item {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    gap: 14px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background-color: #fafafa;
 }
 
-.card-icon {
-    font-size: 1.5rem;
-    margin-bottom: 0.4rem;
+.skill-icon {
+    font-size: 22px;
 }
 
-.sub-card h3 {
-    font-size: 1rem;
-    color: var(--text-main);
-    margin-bottom: 0.3rem;
-}
-
-.sub-card p {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin-bottom: 1rem;
-}
-
-.card-tag {
-    align-self: flex-start;
-    font-size: 0.72rem;
+.skill-item h4 {
+    font-size: 14px;
     font-weight: 700;
-    color: var(--linkedin-blue);
-    background-color: #e8f3ff;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
+    color: var(--text-dark);
 }
 
-/* List Pengalaman */
-.list-pengalaman {
+.skill-item p {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.experience-block {
+    margin-bottom: 28px;
+}
+
+.experience-block:last-child {
+    margin-bottom: 0;
+}
+
+.company-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.company-icon {
+    width: 44px;
+    height: 44px;
+    background-color: var(--primary-light);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.company-name {
+    font-size: 16.5px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.timeline-tree {
+    padding-left: 21px;
+    margin-left: 21px;
+    border-left: 2px dashed #cbd5e1;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 20px;
 }
 
-.item-pengalaman {
+.timeline-node {
+    position: relative;
+}
+
+.node-dot {
+    position: absolute;
+    left: -27px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 1px var(--primary);
+}
+
+.node-content h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.node-date {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.node-content p {
+    font-size: 13.5px;
+    color: var(--text-main);
+}
+
+.edu-item-card {
     display: flex;
-    gap: 1rem;
-    align-items: flex-start;
+    gap: 18px;
 }
 
-.thumb-img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 6px;
-    border: 1px solid var(--border-color);
+.edu-icon-wrapper {
+    width: 52px;
+    height: 52px;
+    background-color: #fef3c7;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
     flex-shrink: 0;
 }
 
-.item-details h3 {
-    font-size: 0.98rem;
-    color: var(--text-main);
+.edu-content h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-dark);
 }
 
-.item-sub {
-    font-size: 0.82rem;
+.edu-degree {
+    font-size: 14.5px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.edu-period {
+    font-size: 13px;
     color: var(--text-muted);
-    margin-bottom: 0.3rem;
 }
 
-.item-desc {
-    font-size: 0.88rem;
-    color: var(--text-main);
-}
-
-.contact-info {
-    font-size: 0.92rem;
-    line-height: 1.8;
-}
-
-/* =========================================================
-   6. FOOTER
-   ========================================================= */
-.footer {
+.footer-card {
     text-align: center;
-    padding: 1.5rem 1rem 0;
-    font-size: 0.82rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+}
+
+.footer-content {
+    padding: 36px 28px 24px;
+}
+
+.footer-content h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.footer-content p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 6px 0 16px;
+}
+
+.footer-bottom {
+    padding: 16px 28px;
+    border-top: 1px solid var(--border);
+    font-size: 12.5px;
     color: var(--text-muted);
 }
 
-.footer p {
-    margin: 0.15rem 0;
-}
-
-/* =========================================================
-   7. MEDIA QUERY (PADA HP TERMASUK LEBAR 375PX)
-   ========================================================= */
 @media (max-width: 640px) {
-    .topbar-container {
-        flex-direction: column;
-        gap: 0.5rem;
+    body {
+        padding: 16px 8px;
     }
 
-    .cover-banner {
-        height: 90px;
+    .card-header, .card-body, .profile-body {
+        padding-left: 18px;
+        padding-right: 18px;
     }
 
-    .avatar-img {
-        width: 90px;
-        height: 90px;
-    }
-
-    .avatar-container {
-        margin-top: -45px;
-    }
-
-    .hero-content, .card {
-        padding: 1rem;
-    }
-
-    .grid-cards {
-        grid-template-columns: 1fr; /* 1 Kolom Vertikal di Layar Ponsel */
-    }
-
-    .item-pengalaman {
+    .header-main {
         flex-direction: column;
     }
 
-    .thumb-img {
+    .cta-group {
+        flex-direction: column;
+    }
+
+    .btn {
         width: 100%;
-        height: 140px;
+    }
+
+    .timeline-tree {
+        margin-left: 10px;
     }
 }
